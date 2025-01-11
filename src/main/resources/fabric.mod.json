@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "instantxp",
+	"version": "${version}",
+	"name": "InstantXp",
+	"description": "Make Bottle's Of Enchanting More Instantaneous",
+	"authors": [
+		"cputnam-a11y"
+	],
+	"contact": {
+		"sources": "https://github.com/cputnam-a11y/InstantXp"
+	},
+	"license": "MIT",
+	"icon": "assets/instantxp/icon.png",
+	"environment": "*",
+	"entrypoints": {},
+	"mixins": [
+		"instantxp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.4",
+		"java": ">=21"
+	}
+}

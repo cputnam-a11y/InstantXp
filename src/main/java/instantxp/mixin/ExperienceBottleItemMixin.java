@@ -3,6 +3,7 @@ package instantxp.mixin;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import instantxp.utils.Utils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -26,8 +27,7 @@ public abstract class ExperienceBottleItemMixin {
             )
     )
     private <T extends ProjectileEntity> T cancelSpawnProjectile(ProjectileEntity.ProjectileCreator<T> creator, ServerWorld world, ItemStack projectileStack, LivingEntity shooter, float roll, float power, float divergence, Operation<T> original, World normalWorld, PlayerEntity user, Hand hand) {
-        int i = 3 + world.random.nextInt(5) + world.random.nextInt(5);
-        user.addExperience(i);
+        Utils.applyExperience(user);
         return null;
     }
 

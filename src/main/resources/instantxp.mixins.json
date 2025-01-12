@@ -3,6 +3,8 @@
   "package": "instantxp.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "DispenserBehaviorMixin",
+    "DispenserBlockMixin",
     "ExperienceBottleItemMixin"
   ],
   "injectors": {
